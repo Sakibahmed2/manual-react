@@ -11,14 +11,14 @@ export default {
   },
   plugins: [
     nodeResolve({ extensions: [".js", "jsx"] }),
+    babel({
+      babelHelpers: "bundled",
+      presets: ["@babel/preset-react"],
+      extensions: [".js", ".jsx"],
+    }),
     commonjs(),
     replace({
       "process.env.NODE_ENV": JSON.stringify("development"),
-    }),
-    babel({
-      babelHelpers: "bundled",
-      presets: ["@babel/react-preset"],
-      extensions: [".js", ".jsx"],
     }),
   ],
 };

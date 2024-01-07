@@ -1,9 +1,9 @@
 import React from "react";
 
-export const helloWorld = () => {
+export const HelloWorld = () => {
   return React.createElement("p", {}, "Hello world");
 };
 
-export const anotherHello = () => {
+export const AnotherHello = () => {
   return React.createElement("p", {}, "Another hello");
 };
